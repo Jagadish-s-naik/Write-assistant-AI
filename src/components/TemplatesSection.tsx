@@ -42,20 +42,29 @@ const TemplatesSection = () => {
   ];
 
   return (
-    <section id="templates" className="py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-4xl font-bold mb-4">
+    <section id="templates" className="relative py-24 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Background */}
+      <div className="absolute inset-0 bg-muted/30" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-primary to-accent-cyan rounded-full blur-[180px] opacity-5" />
+      
+      <div className="relative max-w-7xl mx-auto">
+        <div className="text-center mb-16 animate-fade-in">
+          <div className="inline-block mb-4">
+            <div className="px-4 py-1.5 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium">
+              Quick Start
+            </div>
+          </div>
+          <h2 className="text-4xl sm:text-5xl font-bold mb-4">
             Ready-Made <span className="gradient-text">Templates</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Jump-start your writing with professionally crafted templates for every need
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Jump-start your writing with professionally crafted AI-powered templates
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {templates.map((template, index) => (
-            <div key={index} className="animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
+            <div key={index} className="animate-scale-in" style={{ animationDelay: `${index * 0.08}s` }}>
               <TemplateCard {...template} />
             </div>
           ))}
