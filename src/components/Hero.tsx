@@ -46,9 +46,12 @@ const Hero = () => {
             Create professional content in seconds with our AI-powered writing assistant.
           </p>
 
-          {/* Enhanced CTA Buttons */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6">
-            <Button size="lg" className="bg-gradient-primary shadow-glow-primary hover-lift text-base px-10 h-14 rounded-xl group relative overflow-hidden">
+            <Button 
+              size="lg" 
+              className="bg-gradient-primary shadow-glow-primary hover-lift text-base px-10 h-14 rounded-xl group relative overflow-hidden"
+              onClick={() => window.location.href = '/editor'}
+            >
               <span className="relative z-10 flex items-center gap-2">
                 <Sparkles className="w-5 h-5 group-hover:rotate-12 transition-transform" />
                 Start Writing Free

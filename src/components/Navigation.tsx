@@ -32,7 +32,11 @@ const Navigation = () => {
             <Button variant="outline" size="sm">
               Sign In
             </Button>
-            <Button size="sm" className="bg-gradient-primary shadow-glow-primary">
+            <Button 
+              size="sm" 
+              className="bg-gradient-primary shadow-glow-primary"
+              onClick={() => window.location.href = '/editor'}
+            >
               Start Writing
             </Button>
           </div>
@@ -67,7 +71,11 @@ const Navigation = () => {
           <Button variant="outline" size="sm" className="w-full">
             Sign In
           </Button>
-          <Button size="sm" className="w-full bg-gradient-primary shadow-glow-primary">
+          <Button 
+            size="sm" 
+            className="w-full bg-gradient-primary shadow-glow-primary"
+            onClick={() => window.location.href = '/editor'}
+          >
             Start Writing
           </Button>
         </div>
